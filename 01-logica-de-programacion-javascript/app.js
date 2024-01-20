@@ -1,10 +1,12 @@
-let secretNumber = Math.floor(Math.random()*10)+1;
+let limit = parseInt(prompt("Me indica un numero maximo para adivinar el numero: "));
+let secretNumber = Math.floor(Math.random()*limit)+1;
 let userNumber = 0;
 let tries = 1;
 //let triesWord = "intento"
 let maxTries = 3
 while (userNumber != secretNumber) {
-    let userNumber = parseInt(prompt("Me indicas un numero entre 1 y 10 por favor:"));
+    
+    let userNumber = parseInt(prompt(`Me indicas un numero entre 1 y ${limit} por favor:`));
 
     console.log(userNumber);
 
