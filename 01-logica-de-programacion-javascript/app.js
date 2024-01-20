@@ -1,14 +1,25 @@
 let secretNumber = 6;
-let userNumber = prompt("Me indicas un numero entre 1 y 10 por favor:");
+let userNumber = 0;
+let tries = 1;
+let triesWord = "intento"
+while (userNumber != secretNumber) {
+    let userNumber = prompt("Me indicas un numero entre 1 y 10 por favor:");
 
-console.log(userNumber);
+    console.log(userNumber);
 
-if (userNumber == secretNumber) {
-    alert(`Acertaste el numero es: ${secretNumber}`);
-}else{
-    alert('Lo siento, no acertaste el numero');
+    if (userNumber == secretNumber) {
+        alert(`Acertaste el numero es: ${secretNumber}, lo hiciste en ${tries} ${triesWord} `);
+    }else{
+        if (userNumber > secretNumber) {
+            alert('El numero secreto es menor');
+        } else {
+            alert('El numero secreto es mayor');
+        }
+        //alert('Lo siento, no acertaste el numero');
+    }
+    tries++
+    triesWord = "intentos"
 }
-
 // Desafíos
 
 // Muestra una alerta con el mensaje "¡Bienvenida y bievenido a nuestro sitio web!".
@@ -49,30 +60,56 @@ if (userNumber == secretNumber) {
 // Crea un mensaje que informe al usuario sobre el saldo de su cuenta, utilizando un template string para incluir el valor del saldo.
 // Pide al usuario que ingrese su nombre mediante un prompt. Luego, muestra una alerta de bienvenida usando ese nombre.
 
-let day = prompt('Ingrese dia de la semana por favor: ')
-if (day == "Sabado" || day == "Domingo") {
-    alert("¡Buen fin de semana!")
-}else{
-    alert("¡Buena semana!")
-}
+// let day = prompt('Ingrese dia de la semana por favor: ')
+// if (day == "Sabado" || day == "Domingo") {
+//     alert("¡Buen fin de semana!")
+// }else{
+//     alert("¡Buena semana!")
+// }
 
-let number = prompt('Ingrese un numero por favor: ')
-if (number > 0) {
-    alert(`El numero ${number}  es positivo`)
-}
-if (number < 0) {
-    alert(`El numero ${number}  es negativo`)
-}
+// let number = prompt('Ingrese un numero por favor: ')
+// if (number > 0) {
+//     alert(`El numero ${number}  es positivo`)
+// }
+// if (number < 0) {
+//     alert(`El numero ${number}  es negativo`)
+// }
 
-let points = prompt('Ingrese su puntuacion por favor: ')
-if (points >= 100) {
-    alert("¡Felicidades, has ganado!")
-}else{
-    alert("Intenta nuevamente para ganar.")
-}
+// let points = prompt('Ingrese su puntuacion por favor: ')
+// if (points >= 100) {
+//     alert("¡Felicidades, has ganado!")
+// }else{
+//     alert("Intenta nuevamente para ganar.")
+// }
 
-let accountBalance = 1
-alert(`El saldo de su cuenta es de $${accountBalance}`)
+// let accountBalance = 1
+// alert(`El saldo de su cuenta es de $${accountBalance}`)
 
-let userName = prompt("Me indica su nombre por favor:");
-alert(`Bienvenido ${userName}`)
+// let userName = prompt("Me indica su nombre por favor:");
+// alert(`Bienvenido ${userName}`)
+
+// Desafios
+
+// Crea un contador que comience en 1 y vaya hasta 10 usando un bucle 'while'. Muestra cada número.
+// Crea un contador que comience en 10 y vaya hasta 0 usando un bucle 'while'. Muestra cada número.
+// Crea un programa de cuenta progresiva. Pide un número y cuenta desde 0 hasta ese número utilizando un bucle 'while' en la consola del navegador.
+// Crea un programa de cuenta progresiva. Pide un número y cuenta desde 0 hasta ese número utilizando un bucle 'while' en la consola del navegador.
+
+// let counter = 1;
+// while (counter <= 10) {
+//     alert(counter);
+//     counter++;
+// }
+
+// let counter2 = 10;
+// while (counter2 >= 0) {
+//     alert(counter2);
+//     counter2++;
+// }
+
+// let number = prompt('ingrese un numero: ');
+// let counter3 = 0;
+// while (counter3<=number) {
+//     alert(counter3)
+//     counter3++;
+// }
