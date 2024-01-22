@@ -10,3 +10,5 @@ function assignTextToElement(element, text) {
 
 assignTextToElement('h1','Juego del numero secreto');
 assignTextToElement('p','Indica un numero del 1 al 10');
+
+// tengo que seguir avanzando xd
