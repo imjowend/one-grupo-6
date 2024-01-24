@@ -1,6 +1,13 @@
-let secretNumber = generateSecretNumber();
+const maxRandomNumber = 10
+const minRandomNumber = 1
 let attempt = 1;
 const maxAttempts = 3;
+let randomNumbers = [];
+let secretNumber = generateSecretNumber();
+
+
+
+
 console.log(secretNumber);
 
 function verifyInput() {
@@ -31,8 +38,17 @@ function assignTextToElement(element, text) {
 }
 
 function generateSecretNumber() {
-    let randomNumber = Math.floor(Math.random()*10)+1;
-    return randomNumber;
+    let randomNumber = Math.floor(Math.random()*maxRandomNumber)+minRandomNumber;
+    if (randomNumbers.length == maxRandomNumber) {
+        assignTextToElement('p',`Ya se sortearon todos los numeros posibles`);
+    }else{
+        if (randomNumbers.includes(randomNumber)) {
+            return generateSecretNumber()
+        }else{
+            randomNumbers.push(randomNumber);
+            return randomNumber;
+        }
+    }    
 }
 
 function cleanInput() {
@@ -47,7 +63,7 @@ function restart() {
 
 function initialParams() {
     assignTextToElement('h1','Juego del numero secreto');
-    assignTextToElement('p','Indica un numero del 1 al 10');
+    assignTextToElement('p',`Indica un numero del ${minRandomNumber} al ${maxRandomNumber}`);
     secretNumber = generateSecretNumber();
     attempt = 1;
 }
