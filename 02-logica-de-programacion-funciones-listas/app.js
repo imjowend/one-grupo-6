@@ -1,6 +1,7 @@
 let secretNumber = generateSecretNumber();
-
-console.log(randomNumber)
+let attempt = 1;
+const maxAttempts = 3;
+console.log(secretNumber);
 
 function verifyInput() {
     let userNumber = parseInt(document.getElementById("userValue").value);
@@ -8,13 +9,16 @@ function verifyInput() {
     console.log(secretNumber);
     console.log(secretNumber===userNumber);
     if (secretNumber===userNumber) {
-        assignTextToElement('p','Aceretaste el numero');
+        assignTextToElement('p',`Aceretaste el numero en ${attempt} ${attempt > 1 ? "intentos" : "intento"}`);
+        document.getElementById('reiniciar').removeAttribute('disabled');
     }else{
         if (userNumber>secretNumber) {
             assignTextToElement('p','El numero secreto es menor');
         } else {
             assignTextToElement('p','El numero secreto es mayor');
         }
+        attempt++;
+        cleanInput();
     }
     return;
 }
@@ -26,12 +30,14 @@ function assignTextToElement(element, text) {
     return;
 }
 
-function generateSecretNumber(params) {
-    let randomNumber = Math.floor(Math.random()*10)+1
+function generateSecretNumber() {
+    let randomNumber = Math.floor(Math.random()*10)+1;
     return randomNumber;
+}
+
+function cleanInput() {
+    document.querySelector("#userValue").value = " ";
 }
 
 assignTextToElement('h1','Juego del numero secreto');
 assignTextToElement('p','Indica un numero del 1 al 10');
-
-// tengo que seguir avanzando xd
