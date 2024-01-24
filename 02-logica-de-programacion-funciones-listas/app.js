@@ -2,8 +2,9 @@ let randomNumber = generateRandomNumber();
 
 console.log(randomNumber)
 
-function intentoDeUsuario() {
-    alert('Click desde la funcion');
+function verifyInput() {
+    let userNumber = document.getElementById("userValue").value;
+    console.log(userNumber);
     return;
 }
 
