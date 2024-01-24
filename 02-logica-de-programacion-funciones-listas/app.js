@@ -1,10 +1,21 @@
-let randomNumber = generateRandomNumber();
+let secretNumber = generateSecretNumber();
 
 console.log(randomNumber)
 
 function verifyInput() {
-    let userNumber = document.getElementById("userValue").value;
+    let userNumber = parseInt(document.getElementById("userValue").value);
     console.log(userNumber);
+    console.log(secretNumber);
+    console.log(secretNumber===userNumber);
+    if (secretNumber===userNumber) {
+        assignTextToElement('p','Aceretaste el numero');
+    }else{
+        if (userNumber>secretNumber) {
+            assignTextToElement('p','El numero secreto es menor');
+        } else {
+            assignTextToElement('p','El numero secreto es mayor');
+        }
+    }
     return;
 }
 
@@ -15,7 +26,7 @@ function assignTextToElement(element, text) {
     return;
 }
 
-function generateRandomNumber(params) {
+function generateSecretNumber(params) {
     let randomNumber = Math.floor(Math.random()*10)+1
     return randomNumber;
 }
