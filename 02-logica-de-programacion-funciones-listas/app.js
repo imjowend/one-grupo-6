@@ -39,5 +39,17 @@ function cleanInput() {
     document.querySelector("#userValue").value = " ";
 }
 
-assignTextToElement('h1','Juego del numero secreto');
-assignTextToElement('p','Indica un numero del 1 al 10');
+function restart() {
+    cleanInput();
+    initialParams();
+    document.querySelector('#reiniciar').setAttribute('disabled','true');
+}
+
+function initialParams() {
+    assignTextToElement('h1','Juego del numero secreto');
+    assignTextToElement('p','Indica un numero del 1 al 10');
+    secretNumber = generateSecretNumber();
+    attempt = 1;
+}
+
+initialParams();
