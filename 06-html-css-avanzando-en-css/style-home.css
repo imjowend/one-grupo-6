@@ -2,7 +2,7 @@
     padding-left: 30px;
 }
 
-#banner{
+.banner{
     width:100%;
 }
 
@@ -11,8 +11,11 @@
     padding: 20px;
 }
 
-.titulo-centralizado{
+.titulo-principal{
     text-align: center;
+    font-size: 2em;
+    margin: 0 0 1em;
+    clear: left;
 }
 
 p{
