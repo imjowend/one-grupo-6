@@ -37,6 +37,7 @@ em strong{
 
 .items{
     font-style: italic;
+    line-height: 1.5;
 }
 
 ul{
@@ -46,7 +47,4 @@ ul{
     margin-right: 15%;
 }
 
-.imagenDiferenciales{
-    width: 50%;
-}
 
