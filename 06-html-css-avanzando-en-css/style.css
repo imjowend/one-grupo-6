@@ -185,6 +185,11 @@ td,th{
     text-align: center;
 }
 
+.mapa-contenido{
+    width: 940px;
+    margin: 0 auto;
+}
+
 .diferenciales{
     padding: 3em 0;
     background: #888888;
