@@ -2,7 +2,7 @@
     padding-left: 30px;
 }
 
-.banner{
+#banner{
     width:100%;
 }
 
@@ -11,12 +11,8 @@
     padding: 20px;
 }
 
-.titulo-principal{
+.titulo-centralizado{
     text-align: center;
-    font-size: 2em;
-    margin: 0 0 1em;
-    clear: left;
-    
 }
 
 p{
@@ -38,7 +34,6 @@ em strong{
 
 .items{
     font-style: italic;
-    line-height: 1.5;
 }
 
 ul{
@@ -48,4 +43,7 @@ ul{
     margin-right: 15%;
 }
 
+.imagenDiferenciales{
+    width: 50%;
+}
 
